@@ -25,8 +25,12 @@ export default class Index extends React.Component {
       <div style={{
         marginTop: "10px",
         display: "flex",
-        justifyContent: 'center',
+        flexDirection: "column",
         alignItems: "center",
+      }}>
+        スイッチの状況
+        <div style={{
+        display: "flex",
       }}>
         {/* 1つ目のスイッチ */}
         <Switch
@@ -39,6 +43,7 @@ export default class Index extends React.Component {
           switch={this.state.right_switch}
           handle_switch={this.handleRightSwitch}
         />
+        </div>
       </div>
     );
   }

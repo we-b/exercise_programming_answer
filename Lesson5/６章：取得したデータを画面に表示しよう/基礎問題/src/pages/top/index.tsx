@@ -1,6 +1,8 @@
 import React, { useReducer } from "react";
 import Header from '../../components/header'
 import PostList from '../../components/postList'
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+
 import './index.css';
 
 export type Data = {
@@ -35,6 +37,10 @@ export default function Index () {
       <DataContext.Provider value={{ user, dispatch }}>
         <Header />
         <PostList />
+        <div className="arrow">
+          <ArrowBackIcon className="left-arrow"/>
+          <ArrowBackIcon className="right-arrow"/>
+        </div>
       </DataContext.Provider>
     </div>
   )
