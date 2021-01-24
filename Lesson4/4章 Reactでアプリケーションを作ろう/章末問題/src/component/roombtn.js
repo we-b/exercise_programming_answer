@@ -7,13 +7,16 @@ export default class Index extends React.Component {
     <button
     style={{
     padding: "4rem 6rem",
+    fontSize: "25px",
     backgroundColor:
-        this.props.selectRoom === RoomType.in_use ? "#ff0000":"#0000ff"
+        this.props.selectRoom === RoomType.in_use ? "#FADBDA":"#BBB9D5"
     }}
     onClick={() => {
         this.props.handle_room&&this.props.handle_room(RoomType.in_use);
     }}
-    ></button>
+    >
+        {this.props.selectRoom}
+    </button>
     );
   }
 }
