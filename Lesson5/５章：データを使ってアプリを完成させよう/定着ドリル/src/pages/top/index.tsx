@@ -22,7 +22,7 @@ export default function Index () {
   }, [data.genresData]);
 
   useEffect(() => {
-    console.log(data.genres);
+    console.log(data.tasksData);
   }, [data.tasksData]);
 
   return (
