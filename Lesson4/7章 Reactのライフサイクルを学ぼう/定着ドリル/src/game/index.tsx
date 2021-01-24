@@ -5,7 +5,6 @@ interface Props {
 }
 
 interface State {
-  click_count: number
   debt: number
 }
 
@@ -13,13 +12,12 @@ export default class Index extends React.Component <Props, State>{
   constructor(props: Props) {
     super(props);
     this.state = {
-      click_count: 0,
       debt: 0
     };
   }
 
   componentDidUpdate(prevState: State) {
-    if (prevState.click_count !== this.state.click_count) {
+    if (prevState.debt !== this.state.debt) {
       if (this.state.debt > 100000){
         alert("注意:借入額が10万円を超えました。");
       }
@@ -27,7 +25,6 @@ export default class Index extends React.Component <Props, State>{
   }
 
   handleOnBuy = (): void => {
-    this.setState({ click_count: this.state.click_count + 1 })
     this.setState({ debt: this.state.debt + 10000})
   };
 
