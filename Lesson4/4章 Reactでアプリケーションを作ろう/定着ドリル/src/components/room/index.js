@@ -1,5 +1,5 @@
 import React from "react";
-import Switch from "../../components/switch";
+import Switch from "../switch";
 import { RoomType } from "../../interfaces/roomtype"
 
 export default class Index extends React.Component {
